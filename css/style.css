@@ -8,18 +8,17 @@ main {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #f6ffde;
 }
 
 .month {
-    font-size: 20px;
+    font-size: 24px;
     width: 425px;
-    height: 5%;
-    padding: 0 2.5px;
-    background-color: #d4ad6e;
-    color: #030303;
+    height: 8%;
+    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,10 +27,26 @@ main {
 
 .previous:hover, .next:hover {
     cursor: pointer;
-    color: #fff;
+    color: rgb(4, 87, 15);
 }
 
 .current_month {
     font-weight: 700;
     text-transform: capitalize;
 }
+
+.weekdays {
+    width: 425px;
+    padding: 0 2.5px;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekday {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
