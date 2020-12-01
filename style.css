@@ -1,78 +1,108 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-    vertical-align: baseline;
-    
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-    line-height: 1;
-    box-sizing: border-box;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)*/
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+        box-sizing: border-box;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
 
 /*  FONT CSS AREA */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
+    /*  */
 
 /*  SECTION CREATE NEW EVENT FORM CSS AREA */
+    .event-form{
+        width: 425px;
+        padding: 1em;
+        margin: auto;
+        border: 1px solid red;
+        font-family: 'Ubuntu', sans-serif;
+    }
 
-.event-form{
-    width: 50%;
-    padding: 1em;
-    margin: auto;
-    border: 1px solid red;
-    font-family: 'Ubuntu', sans-serif;
-}
-form label{
-    width: 3em;
-}
+    .row_titleForm{
+        border: 1px solid blue;
+        text-align: center;
+        padding: 0.25em 1em;
+        font-size: 1.5em;
+        font-weight: 700;
 
-form input{
-    width:180px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-}
+    }
 
+    /* TITLE FORM INPUT */
+    #title_input{
+        width: 200px;
+        margin-left: 15%;
+        text-align: center;
+    }
+    /* DATE FORM INPUT */
+    #date_input{
+        width: 200px;
+        margin-left: 4%;
+    }
+    /* END DATE FORM INPUT */
+    #endData_input{
+        width: 200px;
+        margin-left: 8%;
+    }
+    /* EVENT TYPE FORM INPUT */
+    #event_type{
+        width: 220px;
+        margin-left: 5%;
+    }
+    /* FORM INPUT */
+    .row_title,.row_date,.row_dateEnd,.row_remindEvent,.row_descriptionArea,.row_eventType{
+        border: 1px solid blue;
+        padding: 0.25em 1em;
+    }
+    form input, form select{
+        width:180px;
+        padding:3px 10px;
+        border:1px solid #000;
+        background-color:#f6f6f6;
+        margin:8px 0;
+    }
+    .cancelBtn, .createBtn{
+        width: 8em;
+        height: 2em;
+    }
 

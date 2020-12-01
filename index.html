@@ -13,46 +13,59 @@
     </section>
 
     <section class="event-form">
-        <h2 class="">New Event</h2>
-        <form action="" class="text-form">
-            <label for="title">Title:</label>
-            <input type="text">
-            <br>
-            <label for="initial_date">initial date:</label>
-            <input type="date">
-            <br>
-            <input type="checkbox">
-            <label for="end_date_checkbox">End date</label>
-            <br>
-            <label for="end_date_choose">End date:</label>
-            <input type="date">
-            <br>
-            <input type="checkbox">
-            <label for="remind_event">remind me when this event expires</label>
-            <br>
-            <label for="choose_time">Time:</label>
+        <h2 class="row_titleForm">New Event</h2>
+        <form action="" class="text-form" id="formulario">
+            <!-- Title Event -->
+            <div class="row_title">
+                <label for="title">Title:</label>
+                <input type="text" id="title_input" name="title" placeholder="Birthday Joe Done">
+            </div>
+            <!-- Choose initial Date -->
+            <div class="row_date">
+                <label for="initial_date">initial date:</label>
+                <input type="datetime-local"name="meeting-time" value="2018-06-12T19:30"
+                min="2018-06-07T00:00" max="2018-06-14T00:00" id="date_input">
+            </div>
+            <!-- Checkbox End date -->
+            <div class="row_dateEnd">
+                <input type="checkbox">
+                <label for="end_date_checkbox" id="end_date">End date</label>
+            </div>
+            <!-- Checkbox remind -->
+            <div class="row_remindEvent">
+                <input type="checkbox">
+                <label for="remind_event">remind me when this event expires</label>
+            </div>
+            <!-- Select time remind -->
+            <!-- <label for="choose_time">Time:</label>
             <select name="" id="">
                 <option value="">5 minutes</option>
                 <option value="">10 minutes</option>
                 <option value="">15 minutes</option>
                 <option value="">30 minutes</option>
                 <option value="">1 hour</option>
-            </select>
-            <br>
-            <label for="description">Description:</label>
-            <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
-            <br>
+            </select> -->
+            <!-- Text area description -->
+            <div class="row_descriptionArea">
+                <label for="description">Description:</label>
+                <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+            </div>
+            <!-- Event Type -->
+            <div class="row_eventType">
             <label for="event_type">Event type:</label>
-            <select name="" id="">
-                <option value="">Meeting</option>
-                <option value="">Personal</option>
-                <option value="">Study</option>
-                <option value="">etc</option>
-            </select>
-            <br>
-            <input type="button" value="Cancel">
-            <input type="button" value="Create">
+                <select name="" id="event_type">
+                    <option value="">Meeting</option>
+                    <option value="">Personal</option>
+                    <option value="">Study</option>
+                    <option value="">etc</option>
+                </select>
+            </div>
+            <!-- Buttons Create or Cancel -->
+            <button type="submit" class="cancelBtn">Cancel</button>
+            <button type="submit" class="createBtn">Create</button>
         </form>
     </section>
+
+    <script src="functionValidation.js"></script>
 </body>
 </html>
