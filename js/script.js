@@ -6,8 +6,8 @@ function renderCalendar() {
     document.querySelector('.current_month').innerHTML = months[currentDate.getMonth()];
     
     //rendering previous_month_days
-    for(let i = firstDay; i > 0; i--){
-        document.querySelector('.days').innerHTML += `<div class="previous_month_day">${lastDatePrevMonth - i + 1}</div>`
+    for(let i = firstDay; i > 1; i--){
+        document.querySelector('.days').innerHTML += `<div class="previous_month_day">${lastDatePrevMonth - i + 2}</div>`
     }
 
     //rendering current_month_days
@@ -28,8 +28,8 @@ const firstDay = currentDate.getDay(); //index start at 0 which is sunday
 
 const lastDatePrevMonth = (new Date(currentDate.getFullYear(), currentDate.getMonth(), 0)).getDate();
 
-currentDate.setDate(lastDate)
-const lastday = currentDate.getDay()
+currentDate.setDate(lastDate);
+const lastday = currentDate.getDay(); //index start at 0 which is sunday
 
 
-renderCalendar()
+renderCalendar();
