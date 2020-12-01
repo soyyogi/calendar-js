@@ -72,8 +72,14 @@ main {
     opacity: 0.5;
 }
 
+.current_month_day {
+    display: flex;
+    flex-direction: column;
+}
+
 .today {
-    padding: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
     background-color: rgb(255, 52, 52);
     border-radius: 50%;
     color: #fff;
@@ -81,4 +87,18 @@ main {
 
 .today_extra {
     background-color: #000;
+}
+
+.new_event {
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: #fff;
+    color: #222;
+    outline: none;
+    border-color: #f6ffde;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
 }
