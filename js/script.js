@@ -12,7 +12,6 @@ function renderCalendar() {
 
     currentDate.setDate(1);
     const firstDay = currentDate.getDay(); //index start at 0 which is sunday
-    console.log(firstDay)
 
     const lastDatePrevMonth = (new Date(currentDate.getFullYear(), currentDate.getMonth(), 0)).getDate();
 
