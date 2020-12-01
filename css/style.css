@@ -99,6 +99,16 @@ main {
     border-radius: 5px;
 }
 
+.event_list_item {
+    height: 12px;
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #0b3000;
+    color: #fff;
+    margin: 1px;
+}
+
 .hidden {
     display: none;
 }
