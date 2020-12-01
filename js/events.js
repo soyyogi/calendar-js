@@ -9,16 +9,16 @@ function addEventButton() {
         })
     
     })
-    renderEvents()    
+    renderEvents(currentDate.getMonth())    
 }
 
-function renderEvents() {
+function renderEvents(month) {
     const days = document.querySelectorAll('.current_month_day');
     days.forEach(day => {
         const ul = document.createElement('ul');
         ul.classList.add('event_list');
         events.forEach(e => {
-            if(e.date === parseInt(day.querySelector('.date').textContent)){
+            if(e.date === parseInt(day.querySelector('.date').textContent) && e.month === month){
                 const li = document.createElement('li');
                 li.classList.add('event_list_item')
                 li.textContent = e.title;
