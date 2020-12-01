@@ -6,7 +6,7 @@
 
 main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,6 +19,7 @@ main {
     width: 425px;
     height: 8%;
     padding: 0 16px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +38,7 @@ main {
 
 .weekdays {
     width: 425px;
-    padding: 0 2.5px;
+    padding: 10px 2.5px;
     height: 8%;
     display: flex;
     justify-content: space-between;
@@ -54,6 +55,7 @@ main {
     width: 425px;
     height: 100%;
     padding: 0 2.5px;
+    margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
