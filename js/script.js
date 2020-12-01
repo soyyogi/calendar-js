@@ -25,11 +25,11 @@ function renderCalendar() {
     //rendering current_month_days
     for(let i = 1; i <= lastDate; i++){
         if(i === (new Date).getDate() && currentDate.getMonth() === (new Date).getMonth()){
-            document.querySelector('.days').innerHTML += `<div class="current_month_day"><span class="today">${i}</span> \n <button class="new_event hidden">&plus;</div>`
+            document.querySelector('.days').innerHTML += `<div class="current_month_day"><span class="date today">${i}</span> \n <button class="new_event hidden">&plus;</div>`
         } else if(i === (new Date).getDate() && !(currentDate.getMonth() === (new Date).getMonth())) {
-            document.querySelector('.days').innerHTML += `<div class="current_month_day"><span class="today today_extra">${i}</span> \n <button class="new_event hidden">&plus;</div>`
+            document.querySelector('.days').innerHTML += `<div class="current_month_day"><span class="date today today_extra">${i}</span> \n <button class="new_event hidden">&plus;</div>`
         } else {
-            document.querySelector('.days').innerHTML += `<div class="current_month_day">${i} \n <button class="new_event hidden">&plus;</div>`
+            document.querySelector('.days').innerHTML += `<div class="current_month_day"><span class="date">${i}</span> \n <button class="new_event hidden">&plus;</div>`
         }
     }
 
