@@ -24,7 +24,13 @@ function renderCalendar() {
 
     //rendering current_month_days
     for(let i = 1; i <= lastDate; i++){
-        document.querySelector('.days').innerHTML += `<div class="current_month_day">${i}</div>`
+        if(i === (new Date).getDate() && currentDate.getMonth() === (new Date).getMonth()){
+            document.querySelector('.days').innerHTML += `<div class="current_month_day"><span class="today">${i}</span></div>`
+        } else if(i === (new Date).getDate() && !(currentDate.getMonth() === (new Date).getMonth())) {
+            document.querySelector('.days').innerHTML += `<div class="current_month_day"><span class="today today_extra">${i}</span></div>`
+        } else {
+            document.querySelector('.days').innerHTML += `<div class="current_month_day">${i}</div>`
+        }
     }
 
     //rendering next_month_days

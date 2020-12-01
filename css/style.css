@@ -69,3 +69,14 @@ main {
 .previous_month_day, .next_month_day {
     opacity: 0.5;
 }
+
+.today {
+    padding: 8px;
+    background-color: rgb(255, 52, 52);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.today_extra {
+    background-color: #000;
+}
