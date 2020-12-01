@@ -84,7 +84,18 @@
         width: 200px;
         margin-left: 8%;
     }
-    /* EVENT TYPE FORM INPUT */
+    #newDateEnd{
+        display: none;
+    }
+    /* REMIND FORM */
+    #remindChoose{
+        display: none;
+    }
+    #selectRemind{
+        width: 220px;
+        margin-left: 14%;
+    }
+        /* EVENT TYPE FORM INPUT */
     #event_type{
         width: 220px;
         margin-left: 5%;

@@ -28,23 +28,29 @@
             </div>
             <!-- Checkbox End date -->
             <div class="row_dateEnd">
-                <input type="checkbox">
+                <input type="checkbox" id="checked_endDate">
                 <label for="end_date_checkbox" id="end_date">End date</label>
+                <div id="newDateEnd">
+                    <label for="endDate">End date:</label>
+                    <input type="datetime-local">
+                </div>
             </div>
             <!-- Checkbox remind -->
             <div class="row_remindEvent">
-                <input type="checkbox">
+                <input type="checkbox" id="check_remind">
                 <label for="remind_event">remind me when this event expires</label>
+                <div id="remindChoose">
+                    <label for="choose_time" class="labelRemind">Time:</label>
+                    <select name="" id="selectRemind">
+                        <option value="">5 minutes</option>
+                        <option value="">10 minutes</option>
+                        <option value="">15 minutes</option>
+                        <option value="">30 minutes</option>
+                        <option value="">1 hour</option>
+                    </select>
+                </div>
             </div>
             <!-- Select time remind -->
-            <!-- <label for="choose_time">Time:</label>
-            <select name="" id="">
-                <option value="">5 minutes</option>
-                <option value="">10 minutes</option>
-                <option value="">15 minutes</option>
-                <option value="">30 minutes</option>
-                <option value="">1 hour</option>
-            </select> -->
             <!-- Text area description -->
             <div class="row_descriptionArea">
                 <label for="description">Description:</label>
