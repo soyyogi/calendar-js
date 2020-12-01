@@ -5,72 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section id="createEventButton">
-        <h1>Calendar</h1>
-        <button class="create">Add Event</button>
-    </section>
-
-    <section class="event-form">
-        <h2 class="row_titleForm">New Event</h2>
-        <form action="" class="text-form" id="formulario">
-            <!-- Title Event -->
-            <div class="row_title">
-                <label for="title">Title:</label>
-                <input type="text" id="title_input" name="title" placeholder="Birthday Joe Done">
+    <header id="header">
+        <h1 class="header_title">Calendar</h1>
+        <button id="create_event">Add Event</button>
+    </header>
+    <main id="main">
+        <section class="modal_container" id="modal_container">
+            <div id="event_form">
+                <i class="fa fa-times-circle" id="cross"></i>
+                <h2 class="row_titleForm">New Event</h2>
+                <form action="" class="text-form" id="formulario">
+                    <!-- Title Event -->
+                    <div class="row_title">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title_input" name="title" placeholder="Birthday Joe Done">
+                    </div>
+                    <!-- Choose initial Date -->
+                    <div class="row_date">
+                        <label for="initial_date">initial date:</label>
+                        <input type="datetime-local"name="meeting-time"
+                        min="2020-12-01T00:00" id="date_input">
+                    </div>
+                    <!-- Checkbox End date -->
+                    <div class="row_dateEnd">
+                        <input type="checkbox" id="checked_endDate">
+                        <label for="end_date_checkbox" id="end_date">End date</label>
+                        <div id="newDateEnd">
+                            <label for="endDate">End date:</label>
+                            <input type="datetime-local"name="meeting-time"
+                            min="2020-12-01T00:00" id="date_input">
+                        </div>
+                    </div>
+                    <!-- Checkbox remind -->
+                    <div class="row_remindEvent">
+                        <input type="checkbox" id="check_remind">
+                        <label for="remind_event">remind me when this event expires</label>
+                        <div id="remindChoose">
+                            <label for="choose_time" class="labelRemind">Time:</label>
+                            <select name="" id="selectRemind">
+                                <option value="">5 minutes</option>
+                                <option value="">10 minutes</option>
+                                <option value="">15 minutes</option>
+                                <option value="">30 minutes</option>
+                                <option value="">1 hour</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Select time remind -->
+                    <!-- Text area description -->
+                    <div class="row_descriptionArea">
+                        <label for="description">Description:</label>
+                        <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+                    </div>
+                    <!-- Event Type -->
+                    <div class="row_eventType">
+                    <label for="event_type">Event type:</label>
+                        <select name="" id="event_type">
+                            <option value="">Meeting</option>
+                            <option value="">Personal</option>
+                            <option value="">Study</option>
+                            <option value="">etc</option>
+                        </select>
+                    </div>
+                    <!-- Buttons Create or Cancel -->
+                    <button type="submit" class="cancelBtn">Cancel</button>
+                    <button type="submit" class="createBtn">Create</button>
+                </form>
             </div>
-            <!-- Choose initial Date -->
-            <div class="row_date">
-                <label for="initial_date">initial date:</label>
-                <input type="datetime-local"name="meeting-time" value="2018-06-12T19:30"
-                min="2018-06-07T00:00" max="2018-06-14T00:00" id="date_input">
-            </div>
-            <!-- Checkbox End date -->
-            <div class="row_dateEnd">
-                <input type="checkbox" id="checked_endDate">
-                <label for="end_date_checkbox" id="end_date">End date</label>
-                <div id="newDateEnd">
-                    <label for="endDate">End date:</label>
-                    <input type="datetime-local">
-                </div>
-            </div>
-            <!-- Checkbox remind -->
-            <div class="row_remindEvent">
-                <input type="checkbox" id="check_remind">
-                <label for="remind_event">remind me when this event expires</label>
-                <div id="remindChoose">
-                    <label for="choose_time" class="labelRemind">Time:</label>
-                    <select name="" id="selectRemind">
-                        <option value="">5 minutes</option>
-                        <option value="">10 minutes</option>
-                        <option value="">15 minutes</option>
-                        <option value="">30 minutes</option>
-                        <option value="">1 hour</option>
-                    </select>
-                </div>
-            </div>
-            <!-- Select time remind -->
-            <!-- Text area description -->
-            <div class="row_descriptionArea">
-                <label for="description">Description:</label>
-                <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
-            </div>
-            <!-- Event Type -->
-            <div class="row_eventType">
-            <label for="event_type">Event type:</label>
-                <select name="" id="event_type">
-                    <option value="">Meeting</option>
-                    <option value="">Personal</option>
-                    <option value="">Study</option>
-                    <option value="">etc</option>
-                </select>
-            </div>
-            <!-- Buttons Create or Cancel -->
-            <button type="submit" class="cancelBtn">Cancel</button>
-            <button type="submit" class="createBtn">Create</button>
-        </form>
-    </section>
+        </section>
+    </main>
 
     <script src="functionValidation.js"></script>
 </body>

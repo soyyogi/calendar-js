@@ -48,24 +48,72 @@
 /*  FONT CSS AREA */
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-    /*  */
+    body {
+        background-color: #edeef6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+
+/* HEADER CSS AREA  */
+    #header{
+        width: 425px;
+        border: 1px solid black;
+        margin: auto;
+    }
+    .header_title{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        /* border: 1px solid red; */
+    }
+    #create_event{
+        margin-left: 70%;
+        background-color: #47a386;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 25px;
+    }
 
 /*  SECTION CREATE NEW EVENT FORM CSS AREA */
-    .event-form{
+    
+    #event_form{
         width: 425px;
         padding: 1em;
         margin: auto;
         border: 1px solid red;
         font-family: 'Ubuntu', sans-serif;
+        position: absolute;
+        left: 33%;
+        top: 20%;
+        display: none; 
+
+        background-color: #fff;
+        max-width: 100%;
+        padding: 30px 50px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.473);
+        text-align: center;
+    }
+
+    .show{
+        background-color: rgba(0, 0, 0, 0.473);
     }
 
     .row_titleForm{
         border: 1px solid blue;
         text-align: center;
-        padding: 0.25em 1em;
+        padding: 0.5em 1em;
         font-size: 1.5em;
         font-weight: 700;
 
+    }
+    #cross{
+        margin-left: 98%;
     }
 
     /* TITLE FORM INPUT */
@@ -87,6 +135,13 @@
     #newDateEnd{
         display: none;
     }
+    .row_dateEnd{
+        display: flex;
+    }
+    #checked_endDate{
+        margin: 0 10%;
+        justify-content: start;
+    }
     /* REMIND FORM */
     #remindChoose{
         display: none;
@@ -94,6 +149,13 @@
     #selectRemind{
         width: 220px;
         margin-left: 14%;
+    }
+    .row_remindEvent{
+        display: flex;
+    }
+    #check_remind{
+        margin: 0 10%;
+        justify-content: start;
     }
         /* EVENT TYPE FORM INPUT */
     #event_type{
@@ -103,17 +165,16 @@
     /* FORM INPUT */
     .row_title,.row_date,.row_dateEnd,.row_remindEvent,.row_descriptionArea,.row_eventType{
         border: 1px solid blue;
-        padding: 0.25em 1em;
+        padding: 0.5em 1em;
     }
     form input, form select{
-        width:180px;
+        /* width:180px; */
         padding:3px 10px;
         border:1px solid #000;
         background-color:#f6f6f6;
         margin:8px 0;
     }
-    .cancelBtn, .createBtn{
-        width: 8em;
-        height: 2em;
+    .cancelBtn{
+        left: 50%;
     }
 
