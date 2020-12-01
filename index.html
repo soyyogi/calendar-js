@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Calendar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
 </head>
 <body>
-    
+    <section id="createEventButton">
+        <h1>Calendar</h1>
+        <button class="create">Add Event</button>
+    </section>
+
+
+    <form action="">
+        <label for="">Title:</label>
+        <input type="text">
+        <br>
+        <label for="">initial date:</label>
+        <input type="date">
+        <br>
+        <input type="checkbox">
+        <label for="">End date</label>
+        <br>
+        <label for="">End date:</label>
+        <input type="date">
+        <br>
+        <input type="checkbox">
+        <label for="">remind me when this event expires</label>
+        <br>
+        <label for="">Time:</label>
+        <br>
+        <select name="" id="">
+            <option value="">5 minutes</option>
+            <option value="">10 minutes</option>
+            <option value="">15 minutes</option>
+            <option value="">30 minutes</option>
+            <option value="">1 hour</option>
+        </select>
+        <br>
+        <label for="">Description:</label>
+        <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+        <br>
+        <label for="">Event type:</label>
+        <select name="" id="">
+            <option value="">Meeting</option>
+            <option value="">Personal</option>
+            <option value="">Study</option>
+            <option value="">etc</option>
+        </select>
+        <br>
+        <input type="button" value="Cancel">
+        <input type="button" value="Create">
+    </form>
 </body>
 </html>
