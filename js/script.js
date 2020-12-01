@@ -5,12 +5,26 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 function renderCalendar() {
     document.querySelector('.current_month').innerHTML = months[currentDate.getMonth()];
 
-    for(let i = 1; i <= lastDay; i++){
+    const lastDate = (new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0)).getDate();
+
+    currentDate.setDate(1);
+    const firstDay = currentDate.getDay(); //index start at 0 which is sunday
+
+    const lastDatePrevMonth = (new Date(currentDate.getFullYear(), currentDate.getMonth(), 0)).getDate();
+    
+    //rendering previous_month_days
+    for(let i = firstDay; i > 0; i--){
+        document.querySelector('.days').innerHTML += `<div class="previous_month_day">${lastDatePrevMonth - i + 1}</div>`
+    }
+
+    //rendering current_month_days
+    for(let i = 1; i <= lastDate; i++){
         document.querySelector('.days').innerHTML += `<div class="current_month_day">${i}</div>`
     }
+
 }
 
-const lastDay = (new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0)).getDate();
+
 
 
 renderCalendar()
