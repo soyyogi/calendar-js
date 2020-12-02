@@ -51,7 +51,7 @@ function displayEventDetails(e) {
             const ul = document.createElement('ul');
             const section = document.querySelector('.event_popup');
             ul.classList.add('event_display');
-            section.innerHTML = '<p class="event_display_title">Event Details</p>';
+            section.innerHTML = '<div class="event_display_title"><div style="visibility: hidden;">extra</div>\n<p>Event Details</p>\n<i class="fa fa-times-circle" id="close_details"></i>\n</div>';
             for (const key in event) {
                 if (event.hasOwnProperty(key)) {
                     const li = document.createElement('li');
@@ -63,6 +63,9 @@ function displayEventDetails(e) {
 
             section.appendChild(ul);
             section.classList.remove('hidden')
+
+            //remove event details listener for close button
+            document.querySelector('#close_details').addEventListener('click', removeEventDetails)
         }
     })
     //fetch event details from local storage using event title
@@ -70,3 +73,16 @@ function displayEventDetails(e) {
 
 //render add event button
 addEventButton();
+
+//remove event details
+
+function removeEventDetails(){
+    const section = document.querySelector('.event_popup');
+    section.innerHTML = ''
+    section.classList.add('hidden');
+}
+
+window.addEventListener('keypress', (e) => {
+    if (e.key === 'Delete')
+        removeEventDetails()
+})
