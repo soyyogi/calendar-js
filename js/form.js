@@ -28,11 +28,11 @@ form.addEventListener('submit', (e) => {
     const hasEndTime = form.querySelector('input[name="end_date"]').checked;
     const endTime = hasEndTime ? new Date(form.querySelector('input[name="meeting-time-end"]').value) : undefined;
     const hasReminder = form.querySelector('input[name="reminder"]').checked;
-    const remindBefore = hasReminder ? form.querySelector('#select_remind').value : undefined;
+    const reminder = hasReminder ? form.querySelector('#select_remind').value : undefined;
     const description = form.querySelector('#description').value;
     const eventType = form.querySelector('#event_type').value;
 
-    events.push({title, startTime, endTime, remindBefore, description, eventType});
+    events.push({title, startTime, endTime, reminder, description, eventType});
     setEvent();
     renderEvents(currentDate.getMonth());
     hideForm();

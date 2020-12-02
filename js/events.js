@@ -45,7 +45,26 @@ function renderEvents(month) {
 }
 
 function displayEventDetails(e) {
-    console.log(e.target.textContent)
+    events.forEach(event => {
+        if(event.title === e.target.textContent && (new Date(event.startTime)).getDate() === parseInt(e.target.parentElement.parentElement.querySelector('.date').textContent)){
+            console.log(event)
+            const ul = document.createElement('ul');
+            const section = document.querySelector('.event_popup');
+            ul.classList.add('event_display');
+            section.innerHTML = '<p class="event_display_title">Event Details</p>';
+            for (const key in event) {
+                if (event.hasOwnProperty(key)) {
+                    const li = document.createElement('li');
+                    li.classList.add('event_display_item');
+                    li.textContent = key.toUpperCase() + ' : ' + event[key];
+                    ul.appendChild(li);   
+                }
+            }
+
+            section.appendChild(ul);
+            section.classList.remove('hidden')
+        }
+    })
     //fetch event details from local storage using event title
 }
 
