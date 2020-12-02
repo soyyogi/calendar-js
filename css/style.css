@@ -97,6 +97,7 @@ main {
     outline: none;
     border-color: #f6ffde;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .event_list_item {
@@ -107,6 +108,7 @@ main {
     background-color: #0b3000;
     color: #fff;
     margin: 1px;
+    cursor: pointer;
 }
 
 .hidden {

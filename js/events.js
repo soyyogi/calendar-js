@@ -22,11 +22,17 @@ function renderEvents(month) {
                 const li = document.createElement('li');
                 li.classList.add('event_list_item')
                 li.textContent = e.title;
+                li.addEventListener('click', displayEventDetails);
                 ul.appendChild(li);
             }
         })
         day.insertBefore(ul, day.querySelector('.new_event'));
     })
+}
+
+function displayEventDetails(e) {
+    console.log(e.target.textContent)
+    //fetch event details from local storage using event title
 }
 
 //render add event button
