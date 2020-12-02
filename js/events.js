@@ -18,7 +18,7 @@ function renderEvents(month) {
         const ul = document.createElement('ul');
         ul.classList.add('event_list');
         events.forEach(e => {
-            if(e.date === parseInt(day.querySelector('.date').textContent) && e.month === month){
+            if(e.startTime.getDate() === parseInt(day.querySelector('.date').textContent) && e.startTime.getMonth() === month){
                 const li = document.createElement('li');
                 li.classList.add('event_list_item')
                 li.textContent = e.title;
@@ -28,6 +28,7 @@ function renderEvents(month) {
         })
         day.insertBefore(ul, day.querySelector('.new_event'));
     })
+    console.log(events)
 }
 
 function displayEventDetails(e) {

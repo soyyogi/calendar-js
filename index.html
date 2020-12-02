@@ -25,39 +25,39 @@
             <form action="" id="form">
                 <!-- Title Event -->
                 <div class="row_title">
-                    <label for="title">Title:</label>
+                    <label for="title_input">Title:</label>
                     <input type="text" id="title_input" name="title" placeholder="Birthday Joe Done">
                 </div>
                 <!-- Choose initial Date -->
                 <div class="row_date">
                     <label for="initial_date">initial date:</label>
-                    <input type="datetime-local" name="meeting-time" min="2020-12-01T00:00" id="date_input">
+                    <input type="datetime-local" name="meeting-time-start" min="2020-12-01T00:00" id="initial_date">
                 </div>
                 <!-- Checkbox End date -->
                 <div class="row_dateEnd">
                     <div class="column_newDate">
-                        <input type="checkbox" id="checked_endDate">
+                        <input type="checkbox" name="end_date" id="end_date_checkbox">
                         <label for="end_date_checkbox" id="end_date">End date</label>
                     </div>
                     <div id="newDateEnd">
-                        <label for="endDate">End date:</label>
-                        <input type="datetime-local" name="meeting-time" min="2020-12-01T00:00" id="date_input">
+                        <label for="end_date">End date:</label>
+                        <input type="datetime-local" name="meeting-time-end" min="2020-12-01T00:00" id="end_date">
                     </div>
                 </div>
                 <!-- Checkbox remind -->
                 <div class="row_remindEvent">
                     <div class="column_remind">
-                        <input type="checkbox" id="check_remind">
+                        <input type="checkbox" name="reminder" id="remind_event">
                         <label for="remind_event">remind me when this event expires</label>
                     </div>
                     <div id="remindChoose">
-                        <label for="choose_time" class="labelRemind">Time:</label>
-                        <select name="" id="selectRemind">
-                            <option value="">5 minutes</option>
-                            <option value="">10 minutes</option>
-                            <option value="">15 minutes</option>
-                            <option value="">30 minutes</option>
-                            <option value="">1 hour</option>
+                        <label for="select_remind" class="labelRemind">Time:</label>
+                        <select name="reminder_minutes" id="select_remind">
+                            <option value="5">5 minutes</option>
+                            <option value="10">10 minutes</option>
+                            <option value="15">15 minutes</option>
+                            <option value="30">30 minutes</option>
+                            <option value="60">1 hour</option>
                         </select>
                     </div>
                 </div>
@@ -65,12 +65,12 @@
                 <!-- Text area description -->
                 <div class="row_descriptionArea">
                     <label for="description">Description:</label>
-                    <textarea rows="3" cols="30" name="comment" form="usrform"></textarea>
+                    <textarea rows="3" cols="30" id="description" form="usrform"></textarea>
                 </div>
                 <!-- Event Type -->
                 <div class="row_eventType">
                     <label for="event_type">Event type:</label>
-                    <select name="" id="event_type">
+                    <select name="event_type" id="event_type">
                         <option value="">Meeting</option>
                         <option value="">Personal</option>
                         <option value="">Study</option>
@@ -82,6 +82,8 @@
                 <button type="submit" class="createBtn">Create</button>
             </form>
         </section>
+
+        <section class="event_popup"></section>
 
         <section id="header">
             <div style="visibility: hidden;">extra</div>
