@@ -17,7 +17,6 @@ const checkReminder = document.getElementById("check_remind");
 // MODAL CONTAINER 
 const modal_container = document.getElementById("modal_container");
 // DATE INITIAL 
-const first
 
 
 formulario.addEventListener("submit", (e) => {

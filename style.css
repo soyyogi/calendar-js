@@ -48,25 +48,20 @@
 /*  FONT CSS AREA */
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-    body {
-        background-color: #edeef6;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-      }
 
 /* HEADER CSS AREA  */
     #header{
-        width: 425px;
-        border: 1px solid black;
+        width: 100%;
+        border: none;
         margin: auto;
+        border: 1px solid red;
     }
     .header_title{
         font-family: 'Ubuntu', sans-serif;
         font-size: 2em;
         font-weight: 700;
-        /* border: 1px solid red; */
+        text-align: center;
+        padding-bottom: 1em;
     }
     #create_event{
         margin-left: 70%;
@@ -80,20 +75,27 @@
     }
 
 /*  SECTION CREATE NEW EVENT FORM CSS AREA */
-    
+    .modal_container{
+        width: 100%;
+        border: 1px solid blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
     #event_form{
-        width: 425px;
+        width: 50%;
         padding: 1em;
         margin: auto;
         border: 1px solid red;
         font-family: 'Ubuntu', sans-serif;
         position: absolute;
-        left: 33%;
-        top: 20%;
+        justify-content: center;
+        top: 25%;
         display: none; 
-
-        background-color: #fff;
-        max-width: 100%;
+        background-color: #34626c;
         padding: 30px 50px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.473);
@@ -105,11 +107,12 @@
     }
 
     .row_titleForm{
-        border: 1px solid blue;
-        text-align: center;
+        /* border: 1px solid blue; */
+        text-align: justify;
         padding: 0.5em 1em;
         font-size: 1.5em;
         font-weight: 700;
+        color: #b1bed5;
 
     }
     #cross{
@@ -118,21 +121,39 @@
 
     /* TITLE FORM INPUT */
     #title_input{
-        width: 200px;
-        margin-left: 15%;
+        width: 90%;
+        margin-bottom: 0.5em;
+        padding: 0.75em;
         text-align: center;
+        text-decoration: none;
+        background-color: #cfd3ce;
     }
     /* DATE FORM INPUT */
     #date_input{
-        width: 200px;
-        margin-left: 4%;
+        width: 90%;
+        margin-bottom: 0.5em;
+        padding: 0.75em;
+        text-align: center;
+        text-decoration: none;
+        background-color: #cfd3ce;
     }
+    /* CHECKBOX */
+    input[type=checkbox] {
+        display: none;
+      }
+    .column_newDate label,{
+        color: #fff;
+        background-color: rgba(0,0,0,.1);
+    }
+    input[type=checkbox] + label:before {}
+      
     /* END DATE FORM INPUT */
     #endData_input{
-        width: 180px;
+        /* width: 10%; */
         margin-left: 5%;
     }
     #newDateEnd{
+        width: 100%;
         display: none;
         /* width: 50%; */
     }
@@ -148,12 +169,15 @@
         margin: 0 10%;
         justify-content: start;
     }
+    #end_date{
+        color: #fff;
+    }
     /* REMIND FORM */
     #remindChoose{
         display: none;
     }
     #selectRemind{
-        width: 220px;
+        width: 50%;
         margin-left: 14%;
     }
     .row_remindEvent{
@@ -168,14 +192,19 @@
         display: flex;
         flex-direction: start;
     }
+    /*  TEXT AREA FORM */
+    .textarea_form{
+        width: 90%;
+        resize: vertical;
+    }
         /* EVENT TYPE FORM INPUT */
     #event_type{
-        width: 220px;
+        width: 80%;
         margin-left: 5%;
     }
     /* FORM INPUT */
     .row_title,.row_date,.row_dateEnd,.row_remindEvent,.row_descriptionArea,.row_eventType{
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         padding: 0.5em 1em;
     }
     form input, form select{

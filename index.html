@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
     <header id="header">
@@ -20,12 +21,11 @@
                 <form action="" class="text-form" id="formulario">
                     <!-- Title Event -->
                     <div class="row_title">
-                        <label for="title">Title:</label>
-                        <input type="text" id="title_input" name="title" placeholder="Birthday Joe Done">
+                        <input type="text" id="title_input" name="title" placeholder="Add Title Event">
                     </div>
                     <!-- Choose initial Date -->
                     <div class="row_date">
-                        <label for="initial_date">initial date:</label>
+                        <!-- <label for="initial_date">Initial date:</label> -->
                         <input type="datetime-local"name="meeting-time"
                         min="2020-12-01T00:00" id="date_input">
                     </div>
@@ -36,7 +36,7 @@
                             <label for="end_date_checkbox" id="end_date">End date</label>
                         </div>
                         <div id="newDateEnd">
-                            <label for="endDate">End date:</label>
+                            <!-- <label for="endDate">End date:</label> -->
                             <input type="datetime-local"name="meeting-time"
                             min="2020-12-01T00:00" id="date_input">
                         </div>
@@ -62,7 +62,7 @@
                     <!-- Text area description -->
                     <div class="row_descriptionArea">
                         <label for="description">Description:</label>
-                        <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+                        <textarea rows="4" cols="50" name="comment" form="usrform" class="textarea_form"></textarea>
                     </div>
                     <!-- Event Type -->
                     <div class="row_eventType">
