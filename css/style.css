@@ -14,12 +14,45 @@ main {
     background: #f6ffde;
 }
 
+/* HEADER CSS AREA  */
+#header{
+    width: 425px;
+    height: 8%;
+    padding: 5px 16px;
+    margin-top: 20px;
+    background-color: #2e0707d0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.header_title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+    color: #f6ffde;
+} 
+
+#create_event{
+    background-color: #2e0707;
+    color: #f6ffde;
+    outline: none;
+    border-color: #f6ffde;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+/* calendar */
+
 .month {
     font-size: 24px;
     width: 425px;
     height: 8%;
     padding: 0 16px;
-    margin-top: 20px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
