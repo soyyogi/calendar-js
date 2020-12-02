@@ -34,6 +34,8 @@ main {
 .current_month {
     font-weight: 700;
     text-transform: capitalize;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
 
 .weekdays {
@@ -60,6 +62,15 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes onChange {
+    25% {opacity: 0.67; font-size: 12px;}
+    50% {opacity: 0.33; font-size: 6px;}
+    75% {opacity: 0.67; font-size: 12px;}
+    100% {opacity: 1; }
 }
 
 .previous_month_day, .next_month_day, .current_month_day {

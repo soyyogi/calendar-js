@@ -42,14 +42,30 @@ function renderCalendar() {
 //previous and next month rendering
 document.querySelector('.previous').addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
-    renderCalendar();
-    addEventButton();
+    document.querySelector('.days').style.animationName = 'onChange';
+    document.querySelector('.current_month').style.animationName = 'onChange';
+    setTimeout(() => {
+        document.querySelector('.days').style.animationName = null;
+        document.querySelector('.current_month').style.animationName = null;
+    }, 1000)
+    setTimeout(() => {
+        renderCalendar();
+        addEventButton();
+    }, 500)
 })
 
 document.querySelector('.next').addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() + 1);
-    renderCalendar();
-    addEventButton();
+    document.querySelector('.days').style.animationName = 'onChange';
+    document.querySelector('.current_month').style.animationName = 'onChange';
+    setTimeout(() => {
+        document.querySelector('.days').style.animationName = null;
+        document.querySelector('.current_month').style.animationName = null;
+    }, 1000)
+    setTimeout(() => {
+        renderCalendar();
+        addEventButton();
+    }, 500)
 })
 
 renderCalendar();
