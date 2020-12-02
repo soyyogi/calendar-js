@@ -16,6 +16,8 @@ const reminder = document.getElementById("remindChoose");
 const checkReminder = document.getElementById("check_remind");
 // MODAL CONTAINER 
 const modal_container = document.getElementById("modal_container");
+// DATE INITIAL 
+const first
 
 
 formulario.addEventListener("submit", (e) => {
@@ -35,8 +37,6 @@ closeEvent.onclick = function(){
     formEvent.style.display="none";
 }
     
-
-
 // APPEAR OR DISAPPEAR DATE END CHOOSE
 function on(){
     endDate.style.display = "block";

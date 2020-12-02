@@ -31,8 +31,10 @@
                     </div>
                     <!-- Checkbox End date -->
                     <div class="row_dateEnd">
-                        <input type="checkbox" id="checked_endDate">
-                        <label for="end_date_checkbox" id="end_date">End date</label>
+                        <div class="column_newDate">
+                            <input type="checkbox" id="checked_endDate">
+                            <label for="end_date_checkbox" id="end_date">End date</label>
+                        </div>
                         <div id="newDateEnd">
                             <label for="endDate">End date:</label>
                             <input type="datetime-local"name="meeting-time"
@@ -41,8 +43,10 @@
                     </div>
                     <!-- Checkbox remind -->
                     <div class="row_remindEvent">
-                        <input type="checkbox" id="check_remind">
-                        <label for="remind_event">remind me when this event expires</label>
+                        <div class="column_remind">
+                            <input type="checkbox" id="check_remind">
+                            <label for="remind_event">remind me when this event expires</label>
+                        </div>
                         <div id="remindChoose">
                             <label for="choose_time" class="labelRemind">Time:</label>
                             <select name="" id="selectRemind">
