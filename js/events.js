@@ -47,7 +47,6 @@ function renderEvents(month) {
 function displayEventDetails(e) {
     events.forEach(event => {
         if(event.title === e.target.textContent && (new Date(event.startTime)).getDate() === parseInt(e.target.parentElement.parentElement.querySelector('.date').textContent)){
-            console.log(event)
             const ul = document.createElement('ul');
             const section = document.querySelector('.event_popup');
             ul.classList.add('event_display');
