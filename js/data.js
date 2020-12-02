@@ -14,8 +14,10 @@ function setEvent() {
     localStorage.setItem('events', data);
 }
 
-function removeEvent(title, startTime) {
-    events.splice(events.findIndex(e => e.title === title && e.startTime === startTime),1);
+function removeEvent(title, date) {
+    events.splice(events.findIndex(e => e.title === title && (new Date(e.startTime)).getDate() === date),1);
+    setEvent()
+    renderEvents(currentDate.getMonth())
 }
 
 getEvents();

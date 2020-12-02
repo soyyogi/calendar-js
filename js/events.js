@@ -62,10 +62,19 @@ function displayEventDetails(e) {
             }
 
             section.appendChild(ul);
+            section.insertAdjacentHTML("beforeend", '<button class="remove_event">Delete</button>')
             section.classList.remove('hidden')
 
             //remove event details listener for close button
-            document.querySelector('#close_details').addEventListener('click', removeEventDetails)
+            document.querySelector('#close_details').addEventListener('click', removeEventDetails);
+
+            //delete event
+            const title = e.target.textContent;
+            const date = parseInt(e.target.parentElement.parentElement.querySelector('.date').textContent);
+            document.querySelector('.remove_event').addEventListener('click', () => {
+                removeEvent(title, date);
+                removeEventDetails();
+            })
         }
     })
     //fetch event details from local storage using event title
