@@ -15,20 +15,33 @@ function addEventButton() {
 function renderEvents(month) {
     const days = document.querySelectorAll('.current_month_day');
     days.forEach(day => {
-        const ul = document.createElement('ul');
-        ul.classList.add('event_list');
-        events.forEach(e => {
-            if(e.startTime.getDate() === parseInt(day.querySelector('.date').textContent) && e.startTime.getMonth() === month){
-                const li = document.createElement('li');
-                li.classList.add('event_list_item')
-                li.textContent = e.title;
-                li.addEventListener('click', displayEventDetails);
-                ul.appendChild(li);
+        getEvents();
+
+        //check whether events exist
+        if (events){
+
+            //remove already rendered events to avoid duplicating
+            if(day.querySelector('.event_list')){
+                day.querySelector('.event_list').remove()
             }
-        })
-        day.insertBefore(ul, day.querySelector('.new_event'));
+            const ul = document.createElement('ul');
+            ul.classList.add('event_list');
+
+            events.forEach(event => {
+                if((new Date(event.startTime)).getDate() === parseInt(day.querySelector('.date').textContent) && (new Date(event.startTime)).getMonth() === month){
+                    const li = document.createElement('li');
+                    li.classList.add('event_list_item')
+                    li.textContent = event.title;
+                    li.addEventListener('click', displayEventDetails);
+                    ul.appendChild(li);
+                }
+            })
+
+            day.insertBefore(ul, day.querySelector('.new_event'));
+        }
+        
+        
     })
-    console.log(events)
 }
 
 function displayEventDetails(e) {

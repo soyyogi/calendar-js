@@ -32,8 +32,9 @@ form.addEventListener('submit', (e) => {
     const description = form.querySelector('#description').value;
     const eventType = form.querySelector('#event_type').value;
 
-    events.push({title, startTime, endTime, remindBefore, description, eventType})
-    renderEvents(currentDate.getMonth())
-    hideForm()
-    form.reset()
+    events.push({title, startTime, endTime, remindBefore, description, eventType});
+    setEvent();
+    renderEvents(currentDate.getMonth());
+    hideForm();
+    form.reset();
 })
