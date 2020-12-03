@@ -3,6 +3,14 @@ function addEventButton() {
     days.forEach(day => {
         day.addEventListener('mouseenter', () => {
             day.querySelector('.new_event').classList.remove('hidden');
+            day.querySelector('.new_event').addEventListener('click', () => {
+                document.querySelector('.form_section').classList.remove('hidden');
+                let time = (new Date()).toISOString();
+                time = time.split('');
+                time.splice(time.length - 8);
+                time = time.join('');
+                form.querySelector('input[name="meeting-time-start"]').defaultValue = time;               
+            })
         })
         day.addEventListener('mouseleave', () => {
             day.querySelector('.new_event').classList.add('hidden');
