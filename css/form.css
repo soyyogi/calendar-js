@@ -135,3 +135,7 @@
     border-radius: 100px;
     
   }
+
+  .show{
+      background: rgba(0,0,0,0.5);
+  }

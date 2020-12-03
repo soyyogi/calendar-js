@@ -8,10 +8,12 @@ const endDate = document.getElementById("newDateEnd");
 createButton.addEventListener('click', () => {
     document.querySelector('.form_section').classList.remove('hidden');
     document.querySelector('.days').classList.add('parentDiable');
+    document.querySelector('.modal').classList.add('show');
 })
 
 function hideForm(){
     document.querySelector('.form_section').classList.add('hidden');
+    document.querySelector('.modal').classList.remove('show');
 }
 
 document.querySelector('.form_section').addEventListener('focusout', hideForm)
@@ -41,6 +43,7 @@ function validateInput(e){
         }
     }
 }
+
 
 
 const today = new Date().toISOString().substr(0, 10);
