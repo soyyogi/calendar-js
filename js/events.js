@@ -31,6 +31,20 @@ function renderEvents(month) {
                 if((new Date(event.startTime)).getDate() === parseInt(day.querySelector('.date').textContent) && (new Date(event.startTime)).getMonth() === month){
                     const li = document.createElement('li');
                     li.classList.add('event_list_item')
+
+                    //check reminder for upcoming events
+                    if(event.reminder){
+                        if (((new Date(event.startTime)).getTime() - (event.reminder)*60000) <= (new Date(Date.now())).getTime()) {
+                            li.classList.add('upcoming_event');
+                        }
+                    }
+
+                    // check expired events
+                    if ((new Date(event.endTime)).getTime() < (new Date()).getTime() || (new Date(event.startTime)).getTime() < (new Date()).getTime()) {
+                        li.classList.remove('upcoming_event');
+                        li.classList.add('expired_event');
+                    }
+
                     li.textContent = event.title;
                     li.addEventListener('click', displayEventDetails);
                     ul.appendChild(li);
@@ -55,6 +69,22 @@ function displayEventDetails(e) {
                 if (event.hasOwnProperty(key)) {
                     const li = document.createElement('li');
                     li.classList.add('event_display_item');
+
+                    //check reminder for upcoming events
+                    if(event.reminder){
+                        if (((new Date(event.startTime)).getTime() - (event.reminder)*60000) <= (new Date(Date.now())).getTime()) {
+                            document.querySelector('.event_display_title p').textContent = 'Upcoming Event Details';
+                            document.querySelector('.event_display_title p').classList.add('upcoming_event');
+                        }
+                    }
+
+                    // check expired events
+                    if ((new Date(event.endTime)).getTime() < (new Date()).getTime() || (new Date(event.startTime)).getTime() < (new Date()).getTime()) {
+                        document.querySelector('.event_display_title p').textContent = 'Expired Event Details';
+                        document.querySelector('.event_display_title p').classList.remove('upcoming_event');
+                        document.querySelector('.event_display_title p').classList.add('expired_event');
+                    }
+
                     li.textContent = key.toUpperCase() + ' : ' + event[key];
                     ul.appendChild(li);   
                 }
@@ -94,3 +124,5 @@ window.addEventListener('keypress', (e) => {
     if (e.key === 'Delete')
         removeEventDetails()
 })
+
+setInterval(()=>{renderEvents(currentDate.getMonth())}, 10000)
